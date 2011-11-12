@@ -12,6 +12,8 @@ BLUE_BOLD=$fg_bold[blue]
 RESET_COLOR=$reset_color
 
 # Format for git_prompt_info()
+#ZSH_THEME_GIT_PROMPT_PREFIX="%{$BLUE_BOLD%}(%{$RESET_COLOR%}"
+#ZSH_THEME_GIT_PROMPT_SUFFIX="%{$BLUE_BOLD%})%{$RESET_COLOR%}"
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
@@ -35,7 +37,7 @@ ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
 # Prompt format
-PROMPT='%{$GREEN%}%n@%m%{$WHITE%} %{$fg[blue]%}[%{$RESET_COLOR%}%D{%I:%M:%S}%{$BLUE%}]%{$RESET_COLOR%}:%{$BLUE_BOLD%}(%{$RESET_COLOR%}%{$GREEN%}$(current_branch)%{$BLUE_BOLD%})%{$RESET_COLOR%}$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
+PROMPT='%{$GREEN%}%n@%m%{$WHITE%} %{$fg[blue]%}[%{$RESET_COLOR%}%D{%I:%M:%S}%{$BLUE%}]%{$RESET_COLOR%}:$(git_prompt_info)$(git_prompt_ahead)$(git_prompt_short_sha)$(git_prompt_status)
 %{$YELLOW%}%~%u%{$BLUE%}>%{$RESET_COLOR%} '
 #RPROMPT='%{$GREEN%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
 RPROMPT=''
