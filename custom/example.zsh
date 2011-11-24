@@ -3,3 +3,5 @@
 #
 # brainstormr=/Users/robbyrussell/Projects/development/planetargon/brainstormr
 #
+puppet=/Users/anichols/projects/puppet
+rallyhw=/Users/anichols/projects/rallyhw
